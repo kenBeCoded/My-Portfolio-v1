@@ -1,0 +1,116 @@
+/* **********Main********** */
+.main {
+    display: flex;
+    justify-content: center;
+}
+
+.main div {
+    width: 80%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.meImg {
+    height: 150px;
+    width: 150px;
+    margin-bottom: 10px;
+    border: 2px solid #ff0054;
+    box-sizing: content-box;
+    box-shadow: 0px 0px 13px 0px #ff0054;
+    border-radius: 50%;
+    animation: moveUpDown 4s ease-in-out infinite;
+}
+
+.pDet {
+    max-width: 60ch;
+    font-size: 25px;
+}
+
+@keyframes moveUpDown {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.main .name {
+    font-size: 2rem;
+}
+
+.main .fBig {
+    font-size: 7rem;
+    font-weight: 700;
+}
+
+.name span {
+    font-weight: bold;
+}
+
+.main p:nth-of-type(3) {
+    margin-bottom: 30px;
+}
+
+.main .roBtn {
+    font-size: larger;
+    font-weight: 700;
+    height: 50px;
+    width: 120px;
+    margin: 30px 0;
+    color: white;
+    border: none;
+    background-color: #ff0054;
+    border-radius: 15px;
+    transition: all .2s;
+    cursor: pointer;
+}
+
+.main .roBtn:hover {
+    box-shadow: 0px 0px 13px 5px rgba(255, 0, 84, 1);
+}
+
+.main .roBtn:active {
+    background-color: transparent;
+    box-shadow: inset 0px 0px 13px 5px rgba(255, 0, 84, 1);
+}
+
+.fadeW {
+    animation: fade 4s ease;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 512px) {
+
+    /* **********Media Main********** */
+    .main .fBig {
+        font-size: 3rem;
+        font-weight: 700;
+    }
+
+    .pDet {
+        font-size: small;
+    }
+
+    .meImg {
+        height: 120px;
+        width: 120px;
+    }
+}
